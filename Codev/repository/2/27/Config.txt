@@ -1,0 +1,30 @@
+Produto de polinômio por escalar
+3
+Suponha que um polinômio
+
+  P(x) = a_n x^n + a_(n-1) x^(n-1) + ... +
+         a_1 x + a_0
+
+seja modelado por uma lista encadeada com
+n+1 nós, onde o primeiro elemento armazena
+o coeficiente a_0 de P, o segundo nó 
+armazena a_1, o terceiro a_2, e assim por
+diante.
+
+Elabore uma função que receba um polinômio P, 
+representado por uma lista encadeada, e um escalar
+inteiro a, e determine o polinômio correspondente
+ao produto de P por a, representado também como
+lista encadeada. [O(n)]
+
+Ex: 
+
+Entrada: 
+P -> 2 -> -3 -> 1 
+  (representando o polinômio P(x) = x^2 + 3x + 2)
+a = -2
+
+Saída: 
+-> -4 -> 6 -> -2
+  (representando o polinômio 
+   (aP)(x) = -2x^2 + 6x - 4)

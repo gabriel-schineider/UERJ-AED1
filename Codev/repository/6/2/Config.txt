@@ -1,0 +1,10 @@
+Busca em lote por elementos em lista sequencial
+3
+Dada uma lista sequencial L[0..n-1] de inteiros, 
+e uma lista de valores inteiros em um vetor B[0..n-1],
+determinar quantos inteiros de B estão presentes em
+L [O(n log n)].
+
+Você pode assumir a existência de um procedimento
+Ordenar(L, n) diponível para ordenar uma lista 
+sequencial L[0..n-1] em tempo O(n log n).
