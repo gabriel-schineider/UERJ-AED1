@@ -1,29 +1,33 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool Buscar (int* lista, int n, int x) // O(log n)
+int Buscar (int* L, int N, int x)
 {
-	int i=0; int j=n; int k;
-	while (i <= j)
+	// assume-se L uma Lista Linear Sequencial Ordenada
+	// retorna o índice do elemento ou -1 caso não pertença a L
+	// Complexidades... tempo: O(log N), espaço: tetha(1)
+
+	int i = 0; int f = N-1; int m;
+	while (i <= f)
 	{
-		k = (i+j)/2;
-		if (x == lista[k])
+		m = (i+f)/2;
+		if (L[m] == x)
 		{
-			return true;
+			return m;
 		}
 		else
 		{
-			if (x > lista[k])
+			if (L[m] < x)
 			{
-				i = k + 1;
+				i = m + 1;
 			}
 			else
 			{
-				j = k - 1;
+				f = m - 1;
 			}
 		}
 	}
-	return false;
+	return -1;
 }
 
 
@@ -32,7 +36,8 @@ int main (void)
 	int vetor[100] = {-149, -83, -14, -3, -2, -1, 1, 2, 4, 6, 8, 8, 8, 11, 12, 12, 12, 17, 21, 22, 27, 54};
 	int n = 22;
 	
-	printf("%d \n", Buscar(vetor, n, 12));
+	printf("Posição do elemento 12 em L: %d \n", Buscar(vetor, n, 12));
+	printf("Posição do elemento 10 em L: %d \n", Buscar(vetor, n, 10));
 	
 		
 	return 0;

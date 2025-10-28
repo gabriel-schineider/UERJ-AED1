@@ -1,18 +1,21 @@
 #include <stdio.h>
 
-void Inserir(int* lista, int *n, int x) // O(n)
+void Inserir(int* L, int *N, int x)
 {
+	// assume-se L uma Lista Linear Sequencial Ordenada; também assume-se que o tamanho vigente é inferior à capacidade do vetor.
+	// Complexidades... tempo: tetha(N), espaço: tetha(1)
+
 	int i=0;
-	while ((i < *n) && (x >= lista[i]))
+	while ((i < *N) && (L[i] < x))
 	{
 		i++;
 	}
-	for (int j=*n; j>i; j--)
+	for (int j=*N; j>i; j--)
 	{
-		lista[j] = lista[j-1];
+		L[j] = L[j-1];
 	}
-	lista[i] = x;
-	*n += 1;
+	L[i] = x; // Equivalente a "L[j] = x;" nesse caso
+	*N += 1;
 }
 
 
@@ -24,11 +27,14 @@ int main (void)
 	Inserir(vetor, &n, -200);
 	Inserir(vetor, &n, 20);
 	Inserir(vetor, &n, 200);
+	Inserir(vetor, &n, 7);
 	
+	printf("{ ");
 	for (int i=0; i<n; i++)
 	{
 		printf("%d ", vetor[i]);
 	}
+	printf("}\n\nN = %d\n", n);
 	
 	return 0;
 }
