@@ -1,0 +1,32 @@
+Conversão de expressão parentizada em árvore
+3
+Dada uma cadeia de caracteres C[ini..fim], que 
+corresponda a uma expressão algébrica completamente 
+parentizada envolvendo as operações aritméticas 
+fundamentais (*,/,+,-), elabore uma função que 
+transforme-a em uma árvore, da seguinte maneira:
+
+- para cada expressão (a+b), deve-se transformá-la 
+  na subárvore
+
+           [ + ]
+           /   \
+        [ a ] [ b ]
+
+- para cada expressão (a-b), deve-se transformá-la 
+  na subárvore
+
+           [ - ]
+           /   \
+        [ a ] [ b ]
+
+e assim por diante. Por exemplo: (5/((1+2)*(3-4))) 
+deve ser transformado em
+
+              [ / ]
+              /   \
+          [ 5 ]   [ * ]
+                  /   \
+             [ + ]     [ - ]
+             /   \     /   \
+         [ 1 ] [ 2 ] [ 3 ] [ 4 ]
