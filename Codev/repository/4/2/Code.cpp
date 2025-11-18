@@ -5,6 +5,19 @@ int Exp(int b, int n) {
 	// assume b > 0, n >= 0
 	// retorna b^n
 	/* insert your code here */
+	
+	if (n == 0)
+	{
+		return 1;
+	}
+	
+	else
+	{
+		if (n > 0)
+		{
+			return Exp(b, n-1) * b;
+		}
+	}
 }
 
 int main() {

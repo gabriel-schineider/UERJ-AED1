@@ -7,6 +7,14 @@ bool DEBUG;
 
 int Maximo(int A[], int n) {
 	/* insert your code here */
+	if (n == 0)
+	{
+		return -999999;
+	}
+	else
+	{
+		return	max(Maximo(A, n-1), A[n-1]);
+	}
 }
 
 int main(int argc, char * argv[]) {

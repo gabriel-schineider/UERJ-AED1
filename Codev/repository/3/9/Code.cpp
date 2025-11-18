@@ -28,6 +28,31 @@ int Tamanho(Fila &F);
 
 int SomaSequenciaOperacoes(int S[], int n) {
 	/* insert your code here */
+	int soma = 0;
+	Pilha P;
+	Constroi(P);
+	
+	for (int i = 0; i < n; i++)
+	{
+		if (S[i] != 0)
+		{
+			Empilha(P, S[i]);
+		}
+		else
+		{
+			if (Tamanho(P) > 0)
+			{
+				Desempilha(P);
+			}
+		}
+	}
+	
+	while ( Tamanho(P) > 0 )
+	{
+		soma += Desempilha(P);
+	}
+	
+	return soma;
 }
 
 int main() {

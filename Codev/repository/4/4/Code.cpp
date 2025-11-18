@@ -5,6 +5,15 @@ long long int Bin(int n, int k) {
 	// assume n >= k >= 0
 	// retorna binomial de n,k = n! / (k! (n-k)!)
 	/* insert your code here */
+	
+	if (n == k)
+	{
+		return 1;
+	}
+	else
+	{
+		return Bin(n-1, k) * n / (n-k);
+	}
 }
 
 int main() {

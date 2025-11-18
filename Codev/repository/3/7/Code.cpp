@@ -28,6 +28,25 @@ int Tamanho(Fila &F);
 
 bool FilasIdenticas(Fila &f1, Fila &f2) {
 	/* insert your code here */
+	bool iguais = true;
+	
+	if ( Tamanho(f1) != Tamanho(f2) )
+	{
+		iguais = false;
+	}
+	else
+	{	
+		while (Tamanho(f1) > 0)
+		{
+			if ( Desenfileira(f1) != Desenfileira(f2) )
+			{
+				iguais = false;
+				break;
+			}
+		}
+	}
+	
+	return iguais;
 }
 
 int main() {

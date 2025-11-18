@@ -26,6 +26,34 @@ int Tamanho(Fila &F);
 void AlternarPosNeg(int num[], int n) {
 	/* num[0..n-1] são os números entrados pelo usuário */
 	/* insert your code here */
+
+	Fila fPos, fNeg;
+	Constroi(fPos); Constroi(fNeg);
+		
+	for (int i=0; i<n; i++)
+	{
+		if (num[i] > 0)
+		{
+			Enfileira(fPos, num[i]);
+		}
+		else
+		{
+			Enfileira(fNeg, num[i]);
+		}
+	}
+	
+	for (int i=0; i<n; i++)
+	{
+		if (i % 2 == 0)
+		{
+			printf("%d ", Desenfileira(fPos) );
+		}
+		else
+		{
+			printf("%d ", Desenfileira(fNeg) );
+		}
+	}
+	puts("");	
 }
 
 int main() {

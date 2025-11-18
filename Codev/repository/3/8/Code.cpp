@@ -28,6 +28,26 @@ int Tamanho(Fila &F);
 
 bool PilhasIdenticas(Pilha &p1, Pilha &p2) {
 	/* insert your code here */
+	
+	bool iguais = true;
+	
+	if ( Tamanho(p1) != Tamanho(p2) )
+	{
+		iguais = false;
+	}
+	else
+	{
+		while ( Tamanho(p1) > 0 )
+		{
+			if ( Desempilha(p1) != Desempilha(p2) )
+			{
+				iguais = false;
+				break;
+			}
+		}
+	}
+	
+	return iguais;
 }
 
 int main() {

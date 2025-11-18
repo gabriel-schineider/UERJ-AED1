@@ -33,6 +33,8 @@ typedef struct Parentese {
 
 bool VerificaParentizacao(Parentese E[], int n) {
 	/* insert your code here */
+	
+	
 }
 
 int main() {

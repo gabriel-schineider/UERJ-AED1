@@ -6,6 +6,33 @@ int RaizQuad(int n) {
 	// assume n >= 0
 	// retorna ⌊√(n)⌋
 	/* insert your code here */
+
+	if (n == 0)
+	{
+		return 0;
+	}
+
+	int i, f, m;
+	i = 0; f = n+1;
+	m = RaizQuad(n/2);
+	
+	if (i+1 == f)
+	{
+		return i;
+	}
+	
+	else if (m*m == n)
+	{
+		return m;
+	}
+	if (m*m > n)
+	{
+		return m+1;
+	}
+	else if (m*m < n)
+	{
+		return m;
+	}
 }
 
 int main() {

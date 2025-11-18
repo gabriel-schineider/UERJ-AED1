@@ -5,6 +5,22 @@ int RaizQuad(int n) {
 	// assume n >= 0
 	// retorna r tal que r^2 <= n < (r+1)^2
 	/* insert your code here */
+	if (n == 0)
+	{
+		return 0;
+	}
+	else
+	{
+		int r = RaizQuad(n-1);
+		if (((r+1)*(r+1)) == n)
+		{
+			return r+1;
+		}
+		if ( (r*r <= n) && (((r+1)*(r+1)) > n) )
+		{
+			return r;
+		}
+	}
 }
 
 int main() {

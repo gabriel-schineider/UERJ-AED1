@@ -5,6 +5,8 @@ int Impar(int n) {
 	// assume n >= 0
 	// retorna o n-ésimo ímpar
 	/* insert your code here */
+	
+	return n*2 - 1;
 }
 
 int main() {

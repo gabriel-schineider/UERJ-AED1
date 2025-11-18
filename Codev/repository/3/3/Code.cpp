@@ -13,6 +13,10 @@ int Tamanho(Pilha &P);
 void Ordena(Pilha &P) {
 	Pilha Q; Constroi(Q);
 	/* insert your code here */
+	
+	
+	// ? Hanoi ? //
+	
 }
 
 void Escreve(Pilha &P) {

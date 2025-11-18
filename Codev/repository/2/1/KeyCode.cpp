@@ -7,18 +7,13 @@ typedef struct No {
 } No;
 
 int NumeroElementos(No * L) {
-	/* insert your code here */
-	
-	// THE CODE IS RIGHT, BUT IT IS CAUSING STACK OVERFLOW BECAUSE OF THE LIMIT OF THE STACK'S SIZE IN FRONT OF THE AMOUNT OF CALLS OF THIS FUNCTION SINCE CODEV USES TONS OF ELEMENTS TO TEST THE CODE. 
-	
-	if (L == NULL)
-	{
-		return 0;
+	int n = 0;
+	No * p = L;
+	while (p != NULL) {
+		n = n+1;
+		p = p->Prox;
 	}
-	else
-	{
-		return 1 + NumeroElementos(L->Prox);
-	}
+	return n;
 }
 
 void Insere(No * &L, int e) {
